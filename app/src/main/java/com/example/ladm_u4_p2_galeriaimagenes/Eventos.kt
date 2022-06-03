@@ -1,28 +1,22 @@
 package com.example.ladm_u4_p2_galeriaimagenes
 
-import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ladm_u4_p2_galeriaimagenes.databinding.ActivityEventosBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 import mx.edu.ittepic.daar.ladm_u4_p2_albumfotos_berb_daar.CustomAdapter
-import mx.edu.ittepic.daar.ladm_u4_p2_albumfotos_berb_daar.Dato
 import java.io.File
 import java.util.*
 
@@ -159,7 +153,7 @@ class Eventos : AppCompatActivity() {
                     datos.estado = documento.getString("estado").toString()
                     datos.visibilidad = documento.getString("visibilidad").toString()
                     datos.idEvento = documento.getString("idEvento").toString()
-                    datos.nombreEvento = documento.getString("titulo").toString()
+                    datos.titulo = documento.getString("titulo").toString()
                 }
                 /**
                     Mandamos los valores que tiene el evento
@@ -186,7 +180,7 @@ class Eventos : AppCompatActivity() {
                 binding.idEventoActual.setText("ID EVENTO\n${datos.idEvento}")
                 binding.creador.setText("Propietario:\n${datos.propietario}")
                 binding.estatus.setText(datos.estado)
-                setTitle(datos.nombreEvento)
+                setTitle(datos.titulo)
 
                 /**
                  * Idenficamos si el usuario que esta logeado es el propietario o no

@@ -3,18 +3,15 @@ package com.example.ladm_u4_p2_galeriaimagenes
 import android.app.AlertDialog
 import android.app.ProgressDialog
 import android.content.Intent
-import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.ladm_u4_p2_galeriaimagenes.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import mx.edu.ittepic.daar.ladm_u4_p2_albumfotos_berb_daar.Dato
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -74,7 +71,42 @@ class MainActivity : AppCompatActivity() {
                 alerta("Campos idEvento vacio")
                 return@setOnClickListener
             }
-            cargarDatos(id)
+            var datos = Dato()
+            var propietario = autenticacion.currentUser?.email.toString()
+            baseRemota.whereEqualTo("idEvento",id)
+                .addSnapshotListener { query, error ->
+                    if (error != null) {
+                        mensaje(error.message!!)
+                        return@addSnapshotListener
+                    }
+                    for (documento in query!!) {
+                        datos.propietario = documento.getString("propietario").toString()
+                        datos.estado = documento.getString("estado").toString()
+                        datos.visibilidad = documento.getString("visibilidad").toString()
+                        datos.idEvento = documento.getString("idEvento").toString()
+                        datos.titulo = documento.getString("titulo").toString()
+                    }
+                    if (datos.propietario == propietario) {
+                        cargarDatos(id)
+                    } else {
+                        if (datos.visibilidad == "Oculto") {
+                            mensaje("No se encontro evento")
+                        }
+                        if (datos.visibilidad == "Público") {
+                            cargarDatos(id)
+                        }else{
+                            mensaje("No se encontro evento")
+                        }
+                    }
+                }
+        }
+
+        binding.misEventos.setOnClickListener{
+            invocarVentanaMisEventos(propietario)
+        }
+
+        binding.unirseEvento2.setOnClickListener {
+            binding.unirseID.setText(MisEventos.textoCopiado)
         }
     }
 
@@ -86,8 +118,15 @@ class MainActivity : AppCompatActivity() {
 
 
     private  fun invocarVentanaEvento(idEvento : String) {
-        val otraVentana = Intent(this,Eventos::class.java)
+        val otraVentana = Intent(this, Eventos::class.java)
         otraVentana.putExtra("idEvento",idEvento)
+        startActivity(otraVentana)
+        finish()
+    }
+
+    private  fun invocarVentanaMisEventos(propietario : String) {
+        val otraVentana = Intent(this, MisEventos::class.java)
+        otraVentana.putExtra("propetario", propietario)
         startActivity(otraVentana)
         finish()
     }

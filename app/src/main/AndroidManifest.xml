@@ -23,8 +23,11 @@
             android:name=".Login"
             android:exported="false" />
         <activity
+            android:name=".MisEventos"
+            android:exported="true" />
+        <activity
             android:name=".SplashScreen"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

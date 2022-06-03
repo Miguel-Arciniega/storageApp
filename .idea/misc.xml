@@ -3,14 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/activity_eventos.xml" value="0.25" />
+        <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/activity_eventos.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/activity_login.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/activity_splash_screen.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/card_view.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/layout/switchitem.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/PC/ladm_u4_p2_galeriaImagenes/app/src/main/res/menu/menu.xml" value="0.1" />
-        <entry key="..\:/Users/alex_/OneDrive/Documentos/GitHub/LADM_U4_P2_BERB_DAAR/app/src/main/res/layout/activity_eventos.xml" value="0.13496376811594202" />
+        <entry key="..\:/Users/arcin/AndroidStudioProjects/LADM_U4_P2_BERB_DAAR/app/src/main/res/layout/activity_eventos.xml" value="0.2368659420289855" />
+        <entry key="..\:/Users/arcin/AndroidStudioProjects/LADM_U4_P2_BERB_DAAR/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/arcin/AndroidStudioProjects/LADM_U4_P2_BERB_DAAR/app/src/main/res/layout/activity_mis_eventos.xml" value="0.34375" />
       </map>
     </option>
   </component>
