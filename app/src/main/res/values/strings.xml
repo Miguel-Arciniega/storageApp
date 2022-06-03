@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ladm_u4_p2_galeriaImagenes</string>
+    <string-array name="visibilidad">
+        <item>Público</item>
+        <item>Oculto</item>
+    </string-array>
+</resources>

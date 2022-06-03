@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".Eventos">
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardElevation="6dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="150dp">
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="right"
+            android:id="@+id/card_panel"
+            card_view:cardBackgroundColor="#FDF8C8"
+            card_view:cardElevation="6dp"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="5dp">
+            <Switch
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/sw_estadoEvento"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="top"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="abrir/cerrar evento"/>
+            <Switch
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/sw_oculto"
+                android:layout_gravity="top"
+                android:layout_marginTop="50dp"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="50dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="visiblilidad"/>
+
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Cambiar"
+                android:backgroundTint="#3F51B5"
+                android:id="@+id/cambios"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_gravity="top"
+            card_view:cardElevation="6dp"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:text="ID EVENTO"
+                android:id="@+id/idEventoActual"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
+                android:textSize="18dp"
+                android:text="Propietario: "
+                android:id="@+id/creador"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700"
+                android:layout_marginTop="80dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="EVENTO ABIERTO"
+                android:id="@+id/estatus"/>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#D9F6F3">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/fotos"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Elegir Imagen"
+        android:backgroundTint="#28BAAC"
+        android:id="@+id/elegirImagen"
+        android:textStyle="bold"
+        android:textSize="19sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subir foto"
+        android:backgroundTint="#2196F3"
+        android:id="@+id/subir"
+        android:textStyle="bold"
+        android:textSize="19sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regresar"
+        android:backgroundTint="#2196F3"
+        android:id="@+id/regresar"
+        android:textStyle="bold"
+        android:textSize="19sp"/>
+</LinearLayout>

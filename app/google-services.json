@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "348060489631",
+    "project_id": "ladmu4p2galeriabina",
+    "storage_bucket": "ladmu4p2galeriabina.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348060489631:android:82de29694c288838470faa",
+        "android_client_info": {
+          "package_name": "com.example.ladm_u4_p2_galeriaimagenes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348060489631-57pkj3jpag3hgajqa3cvgdc9n2v11ml2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-ldnZZvTlL6Ho0GtxFpzK5qbpg809ulI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348060489631-57pkj3jpag3hgajqa3cvgdc9n2v11ml2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
